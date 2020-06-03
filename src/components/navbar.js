@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('xs')]: {
       display: 'block',
       },
-      fontWeight: '800',
+      fontWeight: '700',
     color: colors.primary
   },
   search: {
