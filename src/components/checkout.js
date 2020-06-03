@@ -30,7 +30,7 @@ const Checkout = (props) => {
     
     const { campaign, perk } = props.location.state;
     const [status, setStatus] = React.useState(0);
-
+    const { user } = props;
     const history = useHistory();
     const classes = useStyles();
 
@@ -39,6 +39,9 @@ const Checkout = (props) => {
     }
     const handlePayment = async () => {
         try {
+            if (!user) {
+                return history.push('/auth/login');
+            }
             const transaction = {
                 resource: 'campaign/fund',
                 data:  {
@@ -73,7 +76,7 @@ const Checkout = (props) => {
                     
                     <Button className={classes.btn} onClick={()=> history.push('/')}>Explore more campaigns</Button>
                     :
-                    <Button className={classes.btn} onClick={handlePayment}>{`Pay INR ${perk.amount}`}</Button>
+                    <Button className={classes.btn} onClick={handlePayment}>{user ? `Pay INR ${perk.amount}` : 'Login to proceed'}</Button>
 
             }
             <br/>

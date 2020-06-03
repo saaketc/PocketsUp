@@ -26,7 +26,7 @@ function App() {
       <Navbar user={user} />
       <Switch>
         <Route path='/campaign/:campaignTitle' render={(props) => <CampaignPage {...props}/>}/>
-        <Route path='/checkout' render={(props) => <Checkout {...props}/>}/>
+        <Route path='/checkout' render={(props) => <Checkout {...props} user={user}/>}/>
         <Route  path="/auth/signup" component={Signup} />
         <Route  path="/auth/login" component={Login} />
         <Route  path="/logout" component={Logout} />
