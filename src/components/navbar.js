@@ -124,7 +124,10 @@ const { user, history } = props;
         if (authType === 'login') {
             return history.push('/auth/login');
         }
-    }
+  }
+  const handleCampaignCreationClick = () => {
+    return history.push('/create');
+  }
   return (
     <div className={classes.root}>
      
@@ -184,15 +187,23 @@ const { user, history } = props;
                   </>
                   }
                   { user &&
-            <div>
-           
+            <div style={{margin: '20px'}}>
+             
+                      <Button 
+                          className={[classes.btn]}
+                          onClick={handleCampaignCreationClick}
+                
+              >Create campaign
+              </Button>
+                  
           
               <IconButton
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
                 onClick={handleMenu}
-                color="primary"
+            color="primary"
+            style={{marginLeft: '20px'}}
               >
                 <AccountCircle />
               </IconButton>

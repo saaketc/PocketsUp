@@ -37,6 +37,10 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+  btn: {
+    color: colors.white,
+    backgroundColor: colors.primary 
+  }
 }));
 
 export default function Form(props) {
@@ -98,8 +102,8 @@ export default function Form(props) {
             type="submit"
             fullWidth
             variant="contained"
-            style={{ color: colors.white, backgroundColor: colors.primary }}
-            className={classes.submit}
+            
+            className={[classes.submit, classes.btn]}
           >
             {label}
           </Button>

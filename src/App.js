@@ -14,6 +14,7 @@ import Logout from "./components/auth/logout";
 import Checkout from "./components/checkout";
 
 import colors from './config/colors';
+import CreateCampaign from "./components/campaignCreation/createCampaign";
 
 function App() {
   const [user, setUser] = useState({});
@@ -26,6 +27,7 @@ function App() {
       <Navbar user={user} />
       <Switch>
         <Route path='/campaign/:campaignTitle' render={(props) => <CampaignPage {...props}/>}/>
+        <Route path='/create' render={(props) => <CreateCampaign {...props} user={user}/>}/>
         <Route path='/checkout' render={(props) => <Checkout {...props} user={user}/>}/>
         <Route  path="/auth/signup" component={Signup} />
         <Route  path="/auth/login" component={Login} />
