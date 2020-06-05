@@ -24,6 +24,7 @@ const startDb = async () => {
 startDb();
 
 app.use(cors());
+app.get('/', (req, res) => res.status(200).send("Heya! it's PocketsUp."));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use("/api/auth", authRoute);
