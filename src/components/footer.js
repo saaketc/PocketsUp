@@ -49,7 +49,7 @@ export default function Footer(props) {
                          
                           
                 <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-                    Made with <FavoriteIcon style={{color:'red', fontSize:'20px'}}/> in India.
+                    Made with <FavoriteIcon style={{color:'red', fontSize:'20px'}}/> & proud in India.
                 </Typography>
               
                 <Copyright />

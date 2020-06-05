@@ -13,15 +13,9 @@ const config = {
         'x-auth-token': getToken()
     },
 }
-export const getData = (resource, params=null) => {
+export const getData = (resource) => {
  
-        return axios.get(`${url}/${resource}`, {
-            headers: {
-                'Content-Type': 'application/json',
-                'x-auth-token': getToken()
-            },
-            params:params
-        });
+        return axios.get(`${url}/${resource}`, config);
 }
     
 

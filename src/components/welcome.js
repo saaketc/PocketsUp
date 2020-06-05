@@ -9,7 +9,6 @@ import MediaCard from "../components/ui/mediaCard";
 import { getData } from "../services/dataServices";
 import colors from "../config/colors";
 import { createSlug } from '../utils/generalFunctions';
-import Footer from './footer';
 import exploreIllus from '../illustrations/explore.svg';
 import loveIllus from '../illustrations/fund.svg';
 import createIllus from '../illustrations/build.svg'
@@ -47,7 +46,6 @@ const descriptions = [
   {text: 'Fund campaigns you love & get exclusive perks', illustration: loveIllus},
   {text: 'Create campaigns & raise funds for your creative works', illustration: createIllus}
 ]
-
 const Welcome = () => {
   const history = useHistory();
   const [campaigns, setCampaigns] = useState([]);
@@ -55,11 +53,7 @@ const Welcome = () => {
 
   useEffect(() => {
     const fetchCampaigns = async () => {
-      const params = {
-        pageLimit:3
-      }
-      const { data } = await getData("campaign", params);
-      console.table(data);
+      const { data } = await getData(`campaign/`);
       setCampaigns(data);
     };
     fetchCampaigns();
@@ -69,7 +63,7 @@ const Welcome = () => {
     return history.push("/auth/signup");
   };
   const handleCampaignClick = (campaign) => {
-    return history.push(`campaign/${createSlug(campaign.title)}?space=${campaign._id}`);
+    return history.push(`/campaign/${createSlug(campaign.title)}?space=${campaign._id}`);
   }
   return (
     <Container style={{ textAlign: "center" }}>
@@ -140,9 +134,6 @@ const Welcome = () => {
           ))
      }
       </Grid>
-      <Footer
-        title="Happy exploring!"
-      />
     </Container>
   );
 };

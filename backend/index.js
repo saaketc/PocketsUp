@@ -6,6 +6,7 @@ const cors = require('cors');
 const authRoute = require("./routes/auth");
 const campaignRoute = require("./routes/campaign");
 const userRoute = require("./routes/user");
+const searchRoute = require("./routes/search");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -22,13 +23,12 @@ const startDb = async () => {
 };
 startDb();
 
-// app.get("/", (req, res) => res.send("This is Hive!"));
-// app.use(crossDomain);
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use("/api/auth", authRoute);
 app.use("/api/campaign", campaignRoute);
 app.use("/api/user", userRoute);
+app.use("/api/search", searchRoute);
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));

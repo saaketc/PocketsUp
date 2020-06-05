@@ -70,7 +70,7 @@ router.get("/", async (req, res) => {
         $in: ["active", "funded"],
       },
     })
-      
+      .sort({ startDate: -1 });
     //   const failedCampaigns = [];
     // const today = new Date();
     // allCampaigns.map(async (campaign) => {
