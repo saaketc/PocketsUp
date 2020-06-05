@@ -83,7 +83,7 @@ const Search = () => {
       <div className={classes.searchIcon}>
         <SearchIcon style={{ color: "black" }} />
       </div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} autoComplete='off'>
         <InputBase
           placeholder="Search campaigns..."
           style={{ color: colors.black }}
