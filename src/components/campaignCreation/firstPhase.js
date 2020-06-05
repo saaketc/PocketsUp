@@ -62,7 +62,7 @@ const FirstPhase = ({ onSubmit }) => {
          
       <br />
           
-      <form onSubmit={formik.handleSubmit}>
+      <form onSubmit={formik.handleSubmit} autoComplete='off'>
         <TextForm
           label="Title"
           fullWidth={true}

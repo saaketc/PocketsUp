@@ -18,13 +18,13 @@ router.get("/portfolio", auth, async (req, res) => {
   try {
     let funding = await Funding.find({ fundingUserId: req.user._id });
     const portfolio = [];
+    console.log(funding);
 
     funding.map(async (f) => {
       let camp = await Campaign.findById(f.campaignId);
       camp.fundingAmount = f.amount;
       portfolio.push(camp);
     });
-
     res.status(200).send(portfolio);
   } catch (e) {
     res.status(500).send(e.message);

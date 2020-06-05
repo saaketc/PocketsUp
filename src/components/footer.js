@@ -6,7 +6,14 @@ import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 
-const color = '#ff6987';
+
+const useStyles = makeStyles(theme => ({
+    footer: {
+        // backgroundColor: theme.palette.background.paper,
+        // marginTop: theme.spacing(8),
+        padding: theme.spacing(6, 0),
+    }
+}));
 
 function Copyright() {
     return (
@@ -21,22 +28,10 @@ function Copyright() {
     );
 }
 
-const useStyles = makeStyles(theme => ({
-    footer: {
-        backgroundColor: theme.palette.background.paper,
-        // marginTop: theme.spacing(8),
-        padding: theme.spacing(6, 0),
-    },
-     btn: {
-        color: color,
-        border: `1px solid ${color}`,
-        fontSize: '12px'
-    }
-}));
 
 export default function Footer(props) {
     const classes = useStyles();
-    const { description, title, onEnrollClick, enrolled, toShowEnroll } = props;
+    const {  title } = props;
 
     return (
         <footer className={classes.footer}>

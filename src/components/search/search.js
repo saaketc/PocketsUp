@@ -2,13 +2,10 @@ import React from "react";
 import InputBase from "@material-ui/core/InputBase";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import SearchIcon from "@material-ui/icons/Search";
-import { Container, Grid, Button } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 
 import colors from "../../config/colors";
-import { getData } from "../../services/dataServices";
-import { toast } from "react-toastify";
-import { createSlug } from "../../utils/generalFunctions";
+
 
 const useStyles = makeStyles((theme) => ({
   search: {
@@ -81,7 +78,7 @@ const Search = () => {
   return (
     <div className={classes.search}>
       <div className={classes.searchIcon}>
-        <SearchIcon style={{ color: "black" }} />
+        <SearchIcon style={{ color: colors.black }} />
       </div>
       <form onSubmit={handleSubmit} autoComplete='off'>
         <InputBase

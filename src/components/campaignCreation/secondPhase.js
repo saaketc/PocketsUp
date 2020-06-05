@@ -26,7 +26,7 @@ const SecondPhase = ({ onAddPerk, onSubmit }) => {
                 
                     style={{ fontSize: '30' }} />
             </Button>
-            <form onSubmit={(event)=>onSubmit(event, perk)}>
+            <form onSubmit={(event)=>onSubmit(event, perk)} autoComplete='off'>
             <TextForm
           label="Membership price"
                     fullWidth={true}
