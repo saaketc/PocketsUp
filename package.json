@@ -20,6 +20,7 @@
     "react-scripts": "3.4.1",
     "react-toastify": "^6.0.5"
   },
+  "proxy": "https://pocketsup.herokuapp.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
