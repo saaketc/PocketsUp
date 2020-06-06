@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const url = 'http://localhost:5000/api';
-
+// const url = 'http://localhost:5000/api';
+const url = ''
 const tokenKey = 'privateUserToken';
 
 const getToken = () => {
