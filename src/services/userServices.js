@@ -1,6 +1,7 @@
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
-const url = 'http://localhost:5000/api/auth';
+// const url = 'http://localhost:5000/api/auth';
+const url = 'https://pocketsup.herokuapp.com/api/auth';
 
 
 export const tokenKey = 'privateUserToken';
