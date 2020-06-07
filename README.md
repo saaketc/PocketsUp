@@ -6,3 +6,6 @@ Get exclusive perks from the campaigns you fund.
 Whether you are a student trying to create something new, small scale entrepreneur, small artisan, a non profit organisation to support a cause or anyone just creating something cool and wish to share with the world. PocketsUp is for you.
 
 ## Come join PocketsUp and explore creativity!
+
+## See my work at
+https://pocketsup.netlify.app/
