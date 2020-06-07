@@ -7,5 +7,5 @@ Whether you are a student trying to create something new, small scale entreprene
 
 ## Come join PocketsUp and explore creativity!
 
-## See my work at
+##  Reach out at
 https://pocketsup.netlify.app/
