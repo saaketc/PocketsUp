@@ -28,11 +28,14 @@ export default function MediaCard({ data, primaryProperty, secProperty, message1
     <Card className={classes.root}>
      
       <CardActionArea>
-        <CardMedia
+        {
+          url &&
+          <CardMedia
           className={classes.media}
           component={(props) => <VideoPlayer {...props} url={url}/>}
           title={data[primaryProperty]}
         />
+       }
       
         <CardContent onClick={()=> onClick ? onClick(data) : null}>
         <Typography variant="h6" style={{ color:'green'}}component="h4">

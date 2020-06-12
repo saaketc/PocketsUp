@@ -19,6 +19,8 @@ import colors from './config/colors';
 import CreateCampaign from "./components/campaignCreation/createCampaign";
 import SearchResults from "./components/search/searchResults";
 import Profile from "./components/profile";
+import ModeratorDashboard from "./components/moderatorDashboard";
+import Forbidden from "./components/forbidden";
 
 const useStyles = makeStyles(theme => ({
   background: {
@@ -40,6 +42,7 @@ function App() {
       <Navbar user={user} />
       <Switch>
         <Route path='/campaign/:campaignTitle' render={(props) => <CampaignPage {...props}/>}/>
+        <Route path='/moderator' render={(props) => user.moderator ? <ModeratorDashboard {...props} user={user}/>: <Forbidden/>}/>
         <Route path='/profile' render={(props) => <Profile {...props} user={user}/>}/>
         <Route path='/create' render={(props) => <CreateCampaign {...props} user={user}/>}/>
         <Route  path="/search" component={SearchResults} />

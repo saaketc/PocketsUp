@@ -85,7 +85,10 @@ const Profile = ({ user }) => {
                           <Button onClick={handleCreateCampaign} className={classes.btn}>Create campaign</Button>
                    }   
           </Typography>
-                  {/* <Button onClick={handlePortfolioClick}> Get funding portfolio</Button> */}
+          <br/>
+          {user.moderator && 
+                  <Button className={classes.btn} onClick={()=> history.push('/moderator')}> Moderator Dashboard</Button>
+                }
         </Grid>
       </Grid>
       <br />

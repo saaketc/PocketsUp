@@ -1,10 +1,9 @@
 import React from "react";
-import { Container, Grid, Typography, Button } from "@material-ui/core";
+import { Container, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { useFormik } from "formik";
 import SelectForm from "../ui/selectForm";
 import TextForm from "../ui/textForm";
-import campaignIllus from "../../illustrations/together.svg";
 import colors from "../../config/colors";
 
 const durationOptions = [
